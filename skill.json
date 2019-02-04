@@ -3,7 +3,7 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Divina Fm Streaming Skill",
+          "summary": "Radio Divina Fm Official Skill",
           "examplePhrases": [
             "Alexa, open Divina Fm",
             "Alexa, play Divina Fm",
@@ -15,12 +15,12 @@
             "live music"
           ],
           "name": "Radio Divina Fm",
-          "description": "Radio Divina Fm Streaming Skill",
+          "description": "Radio Divina Fm Official Skill",
           "smallIconUri": "https://php.localidautore.it/images/divinafm/skill-divinafm-icon.png",
           "largeIconUri": "https://php.localidautore.it/images/divinafm/skill-divinafm-small.png"
         },
         "it-IT": {
-          "summary": "Radio Divina Fm Streaming Skill",
+          "summary": "La Skill Ufficiale di Divina Fm",
           "examplePhrases": [
             "Alexa, apri Divina Fm",
             "Alexa, suona Divina Fm",
@@ -32,7 +32,7 @@
             "live music"
           ],
           "name": "Radio Divina Fm",
-          "description": "Radio Divina Fm Streaming Skill",
+          "description": "La Skill Ufficiale di Divina Fm",
           "smallIconUri": "https://php.localidautore.it/images/divinafm/skill-divinafm-icon.png",
           "largeIconUri": "https://php.localidautore.it/images/divinafm/skill-divinafm-small.png"
         }

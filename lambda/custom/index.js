@@ -20,6 +20,7 @@ const languageStrings = {
 };
 
 /* HELPER FUNCTIONS */
+
 // returns true if the skill is running on a device with a display (show|spot)
 function supportsDisplay(handlerInput) {
     var hasDisplay =
@@ -73,7 +74,15 @@ const PlayStreamIntentHandler = {
             (handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
                 handlerInput.requestEnvelope.request.intent.name === 'PlayStreamIntent') ||
             (handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
-                handlerInput.requestEnvelope.request.intent.name === 'AMAZON.ResumeIntent');
+                handlerInput.requestEnvelope.request.intent.name === 'AMAZON.ResumeIntent') ||
+            (handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
+                handlerInput.requestEnvelope.request.intent.name === 'AMAZON.NextIntent') ||
+            (handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
+                handlerInput.requestEnvelope.request.intent.name === 'AMAZON.PreviousIntent') ||
+            (handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
+                handlerInput.requestEnvelope.request.intent.name === 'AMAZON.RepeatIntent') ||
+            (handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
+                handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StartOverIntent');
     },
     handle(handlerInput) {
         let stream = STREAMS[0];
@@ -172,7 +181,7 @@ const FrequencyIntentHandler = {
 
         const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
 
-        const outputText = requestAttributes.t('SKILL_FREQUENCY_1') + `<break time="1s"/>` + requestAttributes.t('SKILL_FREQUENCY_2') + `<break time="1s"/>` + requestAttributes.t('SKILL_FREQUENCY_3')+ `<break time="1s"/>` + requestAttributes.t('SKILL_FREQUENCY_4')+ `<break time="1s"/>` + requestAttributes.t('SKILL_FREQUENCY_5');
+        const outputText = requestAttributes.t('SKILL_FREQUENCY_1') + `<break time="1s"/>` + requestAttributes.t('SKILL_FREQUENCY_2') + `<break time="1s"/>` + requestAttributes.t('SKILL_FREQUENCY_3') + `<break time="1s"/>` + requestAttributes.t('SKILL_FREQUENCY_4') + `<break time="1s"/>` + requestAttributes.t('SKILL_FREQUENCY_5');
 
         if (supportsDisplay(handlerInput)) {
 
@@ -239,6 +248,7 @@ const PlaybackStoppedIntentHandler = {
         return true;
     }
 };
+
 
 /* PLAYBACK START INTENT */
 const PlaybackStartedIntentHandler = {

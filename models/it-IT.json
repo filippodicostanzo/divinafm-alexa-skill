@@ -38,6 +38,18 @@
           "samples": []
         },
         {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": []
+        },
+        {
           "name": "AMAZON.StopIntent",
           "samples": []
         },
@@ -63,10 +75,6 @@
         },
         {
           "name": "AMAZON.NavigateSettingsIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.NextIntent",
           "samples": []
         },
         {
